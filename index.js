@@ -15,6 +15,7 @@ app.use(body_parser.json())
 
 
 const user_controller = require("./src/controllers/user_controller")
+const subscriber_controller= require("./src/controllers/subscriber_controller")
 
 
 const {register, login} = require("./src/controllers/auth_controller")
@@ -26,7 +27,7 @@ app.use(cors())
 
 app.use("/user",user_controller);
 
-
+app.use("/subscriber",subscriber_controller);
 
 
 
