@@ -16,6 +16,7 @@ app.use(body_parser.json())
 
 const user_controller = require("./src/controllers/user_controller")
 const subscriber_controller= require("./src/controllers/subscriber_controller")
+const mailcontroller =require("./src/controllers/Send_mail")
 
 
 const {register, login} = require("./src/controllers/auth_controller")
@@ -29,7 +30,7 @@ app.use("/user",user_controller);
 
 app.use("/subscriber",subscriber_controller);
 
-
+app.use("/mails",mailcontroller)
 
 app.post("/register",register);
 

@@ -1,8 +1,12 @@
 const express= require("express");
 
+var fs = require("fs")
+
+
+
 const router = express.Router();
 const Subscriber = require("../models/subscriber_model");
-const { route } = require("./user_controller");
+
 
 router.get("/:id", async (req,res)=>{
 
@@ -35,6 +39,34 @@ router.post("/:id", async (req, res) => {
   })
 
 ///post multiple//////////////////////////////////////////////////////////////////////////////////////////////
+
+  router.post("/sbuscriberfile/:id", async (req, res) => {
+
+    try {
+
+        var mydata=fs.readFileSync("mydata.json")
+
+        mydata=JSON.parse(mydata)
+
+        console.log(mydata)
+       
+        const data = req.body;
+
+     mydata.map((el)=>el.user_id=req.params.id)
+
+    //  mydata=JSON.stringify(mydata)
+     
+    //  fs.writeFile("mydata.json",data,()=>{console.log("mydata", mydata)})
+
+      const subscriber_data = await Subscriber.insertMany(mydata);
+  
+      return res.send(subscriber_data);
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  })
+
+
 
   router.patch("/:sub_id", async (req, res) => {
     try {

@@ -1,0 +1,44 @@
+[
+    {
+        "first_name":"last 1",
+    
+        "last_name":"lastName",
+        
+        "email":"subscriber@gmail.com",
+    
+        "address":"add",
+    
+       "phone_number":"8888888",
+    
+      "Birth_day":"1806"
+     
+    },
+    {
+        "first_name":"last 2",
+    
+        "last_name":"lastName",
+        
+        "email":"subscriber@gmail.com",
+    
+        "address":"add",
+    
+       "phone_number":"8888888",
+    
+      "Birth_day":"1806"
+     
+    },
+    {
+        "first_name":"last 3",
+    
+        "last_name":"lastName",
+        
+        "email":"subscriber@gmail.com",
+    
+        "address":"add",
+    
+       "phone_number":"8888888",
+    
+      "Birth_day":"1806"
+     
+    }
+]
