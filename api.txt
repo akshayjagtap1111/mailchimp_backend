@@ -1,0 +1,6 @@
+to register user 
+
+request = post 
+
+
+
